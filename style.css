@@ -12,6 +12,9 @@
     transition: all ease-in-out 0.3s;
     cursor: pointer;
   }
+  .button:hover {
+    color: mediumslateblue;
+  }
 .icon {
     font-size: 20px;
   }
@@ -61,7 +64,7 @@ body {
 }
 
 .header {
-    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(#);
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(img/adobe-after-effects-adobe-creative-wallpaper-preview.png);
     background-position: center bottom;
     background-repeat: no-repeat;
     background-size: cover;
@@ -72,18 +75,21 @@ body {
 
 .menu {
     position: absolute;
-    top: 0;
+    top: 0px;
     left: 0;
     right: 0;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    background-color: black;
+    background-position: 100%;
+    max-width: 100%;
 }
 
-.logo {
-    color: white;
-    font-size: 25px;
-    font-weight: 800;
+
+.logo img { 
+    width: 150px;
+    height: 87.422px;
 }
 
 .menu .navbar ul li {
@@ -97,11 +103,12 @@ body {
     color: white;
     display: block;
     font-weight: 600;
+    transition: color 0.3s ease-in-out;
 
 }
 
 .menu .navbar ul li a:hover {
-    color:blueviolet;
+    color:rgb(255, 255, 255);
 }
 
 #menu {
@@ -137,20 +144,46 @@ body {
 }
 
 .btn-1 {
-    display: inline-block;
-    padding: 11px 35px;
-    background-color: blueviolet;
-    color: white;
-    text-transform: uppercase;
+  width: 130px;
+  height: 40px;
+  display: inline-block;
+  align-items: center center;
+  justify-content: center center;
+  background-color: rgb(63, 0, 179);
+  border: none;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+  text-align: center;
+  line-height: 40px;
 }
 
-.btn-1:hover {
-    background-color: rgb(150, 106, 190);
+.btn-1::before {
+    width: 130px;
+  height: 130px;
+  position: absolute;
+  content: "";
+  background-color: rgb(42, 1, 95);
+  border-radius: 50%;
+  left: -100%;
+  top: 0;
+  transition-duration: .3s;
+  mix-blend-mode: screen;
 }
-
-
-
-
+.btn-1:hover::before {
+    transition-duration: .3s;
+    transform: translate(100%,-50%);
+    border-radius: 0;
+}
+.btn-1:active {
+    transform: translate(5px,5px);
+    transition-duration: .3s;
+}
 
 .coffee{
     padding: 100px 0;

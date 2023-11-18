@@ -9,7 +9,7 @@
 <body>
     <header class="header">
         <div class="menu container">
-            <a href="#" class="logo">logo</a>
+            <a href="#" class="logo"><img src="img/media.png" alt="Logo"></a>
             <input type="checkbox" id="menu"/>
             <label for="menu"> 
                 <img src="" class="menu-icono" alt="">
@@ -17,15 +17,15 @@
     
             <nav class="navbar">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Descubrir</a></li>
-                    <li><a href="#">Chat</a></li>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/Descubrir/index.html">Descubrir</a></li>
+                    <li><a href="/Chat/indexChat.html">Chat</a></li>
                     <li><a href="#">Acerca de</a></li>
                     <li><a href="#">FAQ</a></li>
                 </ul>
                 
             </nav>
-            <input placeholder="Search the internet..." type="text" name="text" class="input">
+            <input placeholder="Search..." type="text" name="text" class="input">
             <button class="button">
                 <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24" stroke-width="0" fill="currentColor" stroke="currentColor" class="icon">
                   <path d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047 9.005 9.005 0 0 1 5.9 8.181.75.75 0 1 1-1.499.044 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.5-.045 9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5ZM8 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z"></path>
@@ -258,6 +258,32 @@
 
         </div>
     </footer>
+    <script>
+        // Función para generar colores aleatorios
+        function getRandomColor() {
+          const letters = '0123456789ABCDEF';
+          let color = '#';
+          for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+          }
+          return color;
+        }
+    
+        // Aplica el color aleatorio al pasar el ratón sobre el enlace
+        const links = document.querySelectorAll('.menu .navbar ul li a, .button');
+        links.forEach(link => {
+          link.addEventListener('mouseover', function() {
+            const randomColor = getRandomColor();
+            this.style.color = randomColor;
+          });
+    
+          link.addEventListener('mouseout', function() {
+            // Vuelve al color por defecto al quitar el ratón
+            this.style.color = 'rgb(255, 255, 255)';
+          });
+        });
 
+        
+      </script>
 </body>
 </html>
