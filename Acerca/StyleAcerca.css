@@ -20,6 +20,9 @@
 
 .card p {
     color: #666;
+    font-size: 14px;
+    max-height: 100px; /* Establece la altura máxima del párrafo */
+    overflow: hidden;
 }
 
 .newtons-cradle {
