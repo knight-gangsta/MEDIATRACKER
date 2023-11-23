@@ -1,3 +1,39 @@
+.user-menu-options {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    position: absolute;
+    top: 40px; /* Ajusta la distancia vertical desde el botón */
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    z-index: 1; /* Asegura que la lista esté sobre otros elementos */
+}
+
+.user-menu-options li {
+    padding: 10px;
+    text-align: center;
+}
+
+.user-menu-options a {
+    text-decoration: none;
+    color: #333;
+    display: block;
+}
+
+.button:hover + .user-menu-options,
+.user-menu-options:hover {
+    display: block;
+}
+
+.button:hover + .user-menu-options,
+.user-menu-options:hover,
+.button:focus + .user-menu-options,
+.user-menu-options:focus {
+    display: block;
+}
+
 .card {
     width: 300px;
     margin: 20px;
