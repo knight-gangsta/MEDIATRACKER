@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Media Tracker</title>
+    <link rel="stylesheet" href="/FAQ/stylefa.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="menu container">
+            <a href="#" class="logo"><img src="/img/media.png" alt="Logo"></a>
+            <input type="checkbox" id="menu" />
+            <label for="menu">
+                <img src="" class="menu-icono" alt="">
+            </label>
+
+            <nav class="navbar">
+                <ul>
+                    <li><a href="/index.html">Inicio</a></li>
+                    <li><a href="/Descubrir/index.html">Descubrir</a></li>
+                    <li><a href="/Chat/indexChat.html">Chat</a></li>
+                    <li><a href="/Acerca/indexAcerca.html">Acerca de</a></li>
+                    <li><a href="/FAQ/index.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <input placeholder="Search..." type="text" name="text" class="input">
+            <button class="button">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24"
+                    stroke-width="0" fill="currentColor" stroke="currentColor" class="icon">
+                    <path
+                        d="M12 2.5a5.5 5.5 0 0 1 3.096 10.047 9.005 9.005 0 0 1 5.9 8.181.75.75 0 1 1-1.499.044 7.5 7.5 0 0 0-14.993 0 .75.75 0 0 1-1.5-.045 9.005 9.005 0 0 1 5.9-8.18A5.5 5.5 0 0 1 12 2.5ZM8 8a4 4 0 1 0 8 0 4 4 0 0 0-8 0Z">
+                    </path>
+                </svg>
+            </button>
+        </div>
+        <div class="header-content container">
+            <h1>FAQ</h1>
+            <p>
+                
+            </p>
+
+            <main class="faq container">
+                <h2></h2>
+                <select id="faqSelect">
+                    <option value="">Pregunta y respuesta</option>
+                    <option value="pregunta1">¿como me ayuda mediatracker en mi vida como diseñador?</option>
+                    <option value="pregunta2">¿Cómo utilizar MediaTracker para descubrir las mejores herramientas multimedia para proyectos creativos?</option>
+                    <option value="pregunta3">¿Qué tipo de información y recursos ofrece MediaTracker.?</option>
+                    <!-- Agrega más opciones según sea necesario -->
+                </select>
+                <p  id="respuestaPregunta1"> <img src="/img/media.png"> ¡Hola diseñador creativo! Estoy aquí para simplificar tu proceso creativo, proporcionándote 
+                    información detallada sobre diversas herramientas multimedia. Mi objetivo es ayudarte a tomar decisiones informadas y inspirarte con nuevas opciones. 
+                    Explora con confianza y disfruta de un viaje creativo emocionante. ¡Adelante, sigamos explorando juntos! </p>
+
+                <p id="respuestaPregunta2"> <img src="/img/media.png"> MediaTracker simplifica tu búsqueda de las mejores herramientas multimedia para tus proyectos creativos.
+                     Con información detallada y precisa, te guía en la selección de opciones que se adaptan a tus necesidades. Explora con confianza y optimiza tu proceso 
+                     creativo con esta herramienta útil.</p>
+                <p id="respuestaPregunta3"> <img src="/img/media.png"> MediaTracker te proporciona información detallada y recursos útiles para mejorar tus decisiones creativas. 
+                    Desde revisiones de herramientas multimedia hasta tutoriales y comparativas, encontrarás todo lo necesario para potenciar tus proyectos. ¡
+                    Descubre nuevas posibilidades y optimiza tu creatividad con MediaTracker!
+
+
+
+
+
+
+                </p>
+                <img id="faqImage" src="" alt="">
+            </main>
+
+        </div>
+    </header>
+
+    
+
+    <footer class="footer">
+        <div class="footer-content container">
+
+            <div class="link">
+
+                <h3>lorem</h3>
+                <ul>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                </ul>
+
+            </div>
+            <div class="link">
+
+                <h3>lorem</h3>
+                <ul>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                </ul>
+
+            </div>
+            <div class="link">
+
+                <h3>lorem</h3>
+                <ul>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                </ul>
+
+            </div>
+            <div class="link">
+
+                <h3>lorem</h3>
+                <ul>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                    <li><a href="#">lorem</a></li>
+                </ul>
+
+            </div>
+
+        </div>
+    </footer>
+
+    <script>
+        const respuestas = {
+            pregunta1: "Respuesta a la pregunta 1.",
+            pregunta2: "Respuesta a la pregunta 2.",
+            pregunta3: "Respuesta a la pregunta 3.",
+            // Agrega más respuestas según sea necesario
+        };
+
+        const select = document.getElementById('faqSelect');
+        const img = document.getElementById('faqImage');
+        const respPregunta1 = document.getElementById('respuestaPregunta1');
+        const respPregunta2 = document.getElementById('respuestaPregunta2');
+        const respPregunta3 = document.getElementById('respuestaPregunta3');
+
+        select.addEventListener('change', function () {
+            img.src = '';
+            respPregunta1.style.display = 'none';
+            respPregunta2.style.display = 'none';
+            respPregunta3.style.display = 'none';
+
+            const selectedValue = this.value;
+            if (selectedValue in respuestas) {
+                img.src = `${selectedValue}.jpg`;
+                document.getElementById(`respuesta${selectedValue.charAt(0).toUpperCase() + selectedValue.slice(1)}`).style.display = 'block';
+            }
+        });
+
+        // Función para generar colores aleatorios
+        function getRandomColor() {
+          const letters = '0123456789ABCDEF';
+          let color = '#';
+          for (let i = 0; i < 6; i++) {
+            color += letters[Math.floor(Math.random() * 16)];
+          }
+          return color;
+        }
+    
+        // Aplica el color aleatorio al pasar el ratón sobre el enlace
+        const links = document.querySelectorAll('.menu .navbar ul li a, .button');
+        links.forEach(link => {
+          link.addEventListener('mouseover', function() {
+            const randomColor = getRandomColor();
+            this.style.color = randomColor;
+          });
+    
+          link.addEventListener('mouseout', function() {
+            // Vuelve al color por defecto al quitar el ratón
+            this.style.color = 'rgb(255, 255, 255)';
+          });
+        });
+    </script>
+</body>
+
+</html>
